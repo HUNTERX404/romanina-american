@@ -1,0 +1,50 @@
+@import url("./style.css");
+body {
+  background: url("../images/resault-request-mobile.jpg"), rgba(27, 46, 92, 0.5);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 80%;
+  /* background-position-y: -100%; */
+  /* background-position-x: center; */
+  background-blend-mode: multiply;
+  min-height: 100vh;
+}
+.box-request {
+  width: 90%;
+  min-height: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: #ffff;
+}
+@media (min-width: 576px) {
+  body {
+    background: url("../images/resault-request.jpg"), rgba(27, 46, 92, 0.5);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 80%;
+    /* background-position-y: -100%; */
+    /* background-position-x: center; */
+    background-blend-mode: multiply;
+    min-height: 100vh;
+  }
+  .box-request {
+    top: 50%;
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  .box-request {
+    width: 60%;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+  }
+}
