@@ -1,6 +1,6 @@
 @import url("./style.css");
 body {
-  background: url("../images/login.jpg"), var(--primary-color);
+  background: url("../images/login.jpg"), rgba(27, 46, 92, 0.5);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100%;
