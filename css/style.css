@@ -4,7 +4,10 @@
   --danger-color: #c0272d;
   --success-color: #2b7b3f;
 }
-
+@font-face {
+  font-family: FranklinGothicBook;
+  src: url("../fonts/Franklin\ Gothic\ Book\ Regular.ttf");
+}
 /* reset main colors */
 .text-primary {
   color: var(--primary-color) !important;

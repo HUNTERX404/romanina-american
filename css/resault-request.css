@@ -30,8 +30,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-y: 80%;
-    /* background-position-y: -100%; */
-    /* background-position-x: center; */
+    font-family: "FranklinGothicBook";
     background-blend-mode: multiply;
     min-height: 100vh;
   }

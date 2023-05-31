@@ -1,0 +1,76 @@
+@import url("./style.css");
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #1b2f5c,
+    #152852,
+    #0f2149,
+    #091b3f,
+    #041436
+  );
+  min-height: 100vh;
+  color: white;
+  font-family: "FranklinGothicBook";
+}
+.layout {
+  min-height: 100vh;
+  display: flex;
+}
+.nav {
+  width: 250px;
+  position: fixed;
+  min-height: calc(100vh - 5%);
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  align-items: center;
+  padding: 1rem 0rem;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+}
+.list-group-item-action {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  border: none;
+}
+.list-group-item-action.active {
+  background-color: white;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-bottom: 2px solid var(--danger-color);
+  font-weight: bold;
+}
+.list-group-item-action:hover {
+  background-color: #1b2e5c17;
+  color: var(--danger-color);
+}
+.close-button {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: var(--danger-color);
+  background-color: #1b2e5c17;
+}
+@media (min-width: 992px) {
+  .nav {
+    position: static;
+    min-height: 100vh;
+    border-radius: 0;
+    transform: translateY(0);
+  }
+  .close-button {
+    display: none;
+  }
+}

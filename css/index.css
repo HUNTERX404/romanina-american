@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-position-y: -100%;
   background-position-x: center;
+  font-family: "FranklinGothicBook";
   background-blend-mode: multiply;
 }
 
