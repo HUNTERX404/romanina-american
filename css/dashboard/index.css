@@ -1,0 +1,134 @@
+@import url("../style.css");
+
+body {
+  color: white;
+  font-family: "FranklinGothicBook";
+}
+.layout {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right top,
+    #1b2f5c,
+    #152852,
+    #0f2149,
+    #091b3f,
+    #041436
+  );
+}
+.nav {
+  width: 250px;
+  position: fixed;
+  min-height: calc(100vh - 5%);
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  align-items: center;
+  padding: 1rem 0rem;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+}
+.list-group-item-action {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  border: none;
+}
+.dataTables_filter {
+  display: none;
+}
+.dataTables_info {
+  display: none;
+}
+.input-search {
+  width: 300px;
+  max-width: 40%;
+}
+.table-container {
+  overflow-x: auto;
+}
+.show-icon {
+  color: var(--primary-color);
+  border-radius: 50%;
+  background-color: rgba(4, 20, 54, 0.2);
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+.show-icon:hover {
+  background-color: rgba(4, 20, 54, 0.3);
+  cursor: pointer;
+}
+.dataTables_length {
+  display: flex;
+}
+.dataTables_paginate {
+  display: flex;
+  align-items: center;
+  background-color: #04143617;
+  /* padding: 0.5rem 1rem; */
+  overflow: hidden;
+  border-radius: 10px;
+}
+.paginate_button {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+.paginate_button:hover {
+  cursor: pointer;
+  color: var(--danger-color);
+  background-color: #04143654;
+}
+.paginate_button {
+  padding: 0.5rem 1rem;
+}
+.paginate_button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.dataTables_length label {
+  color: var(--primary-color);
+}
+.list-group-item-action.active {
+  background-color: white;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-bottom: 2px solid var(--danger-color);
+  font-weight: bold;
+}
+.list-group-item-action:hover {
+  background-color: #1b2e5c17;
+  color: var(--danger-color);
+}
+.close-button {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: var(--danger-color);
+  background-color: #1b2e5c17;
+}
+@media (min-width: 992px) {
+  .nav {
+    position: static;
+    min-height: 100vh;
+    border-radius: 0;
+    transform: translateY(0);
+  }
+  .close-button {
+    display: none;
+  }
+}

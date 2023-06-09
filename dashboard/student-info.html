@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <!-- icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/dashboard/student-info.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="layout">
+      <main class="w-100 container p-5">
+        <div class="bg-white p-4 pb-0 rounded position-relative">
+          <div class="position-absolute text-primary">
+            <span class="material-icons fs-2 arrow-back"> arrow_back </span>
+          </div>
+          <div class="w-100">
+            <h2 class="text-danger text-center mt-0">Nour Samman</h2>
+          </div>
+          <div class="d-flex gap-3 justify-content-end">
+            <button class="btn btn-secondary px-md-4 px-lg-5 py-2">
+              Accept
+            </button>
+            <button class="btn btn-danger px-md-4 px-lg-5 py-2">Reject</button>
+          </div>
+          <ul
+            class="nav-pills d-flex p-0 list-unstyled pt-4 mb-0 bg-white justify-content-evenly"
+            id="pills-tab"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active border-3 rounded-0"
+                id="pills-personal-info-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-personal-info"
+                type="button"
+                role="tab"
+                aria-controls="pills-personal-info"
+                aria-selected="true"
+              >
+                Personal Information
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link border-3 rounded-0"
+                id="pills-medical-certificate-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-medical-certificate"
+                type="button"
+                role="tab"
+                aria-controls="pills-medical-certificate"
+                aria-selected="true"
+              >
+                medical certificate
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link border-3 rounded-0"
+                id="pills-profile-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-profile"
+                type="button"
+                role="tab"
+                aria-controls="pills-profile"
+                aria-selected="false"
+              >
+                Valid health insurance
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link border-3 rounded-0"
+                id="pills-contact-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-contact"
+                type="button"
+                role="tab"
+                aria-controls="pills-contact"
+                aria-selected="false"
+              >
+                Confirmation letter from home institution
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link border-3 rounded-0"
+                id="pills-disabled-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#pills-disabled"
+                type="button"
+                role="tab"
+                aria-controls="pills-disabled"
+                aria-selected="false"
+              >
+                Copy of the travel documents
+              </button>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="tab-content bg-white p-4 text-primary rounded mt-5"
+          id="pills-tabContent"
+        >
+          <div
+            class="tab-pane fade show active"
+            id="pills-personal-info"
+            role="tabpanel"
+            aria-labelledby="pills-personal-info-tab"
+            tabindex="0"
+          >
+            personal-info
+          </div>
+          <div
+            class="tab-pane fade show"
+            id="pills-medical-certificate"
+            role="tabpanel"
+            aria-labelledby="pills-medical-certificate-tab"
+            tabindex="0"
+          >
+            medical-certificate
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-profile"
+            role="tabpanel"
+            aria-labelledby="pills-profile-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-contact"
+            role="tabpanel"
+            aria-labelledby="pills-contact-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+          <div
+            class="tab-pane fade"
+            id="pills-disabled"
+            role="tabpanel"
+            aria-labelledby="pills-disabled-tab"
+            tabindex="0"
+          >
+            ...
+          </div>
+        </div>
+      </main>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -30,9 +30,9 @@
             <div
               class="text-white position-relative mb-5 fs-2 fw-semibold text-center d-flex flex-column"
             >
-            <span class="circle-red"></span>
-            <span class="circle-yellow"></span>
-            <span class="circle-white"></span>
+              <span class="circle-red"></span>
+              <span class="circle-yellow"></span>
+              <span class="circle-white"></span>
               <p class="mb-0">Romanian-American</p>
               <p class="mb-0">University</p>
             </div>
@@ -108,6 +108,32 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyD-YvrMUkAiFVngWqGK4FsbH5V8BR3WkUQ",
+        authDomain: "test-96772.firebaseapp.com",
+        projectId: "test-96772",
+        storageBucket: "test-96772.appspot.com",
+        messagingSenderId: "1035837406206",
+        appId: "1:1035837406206:web:aa0420e328261adfc31eaf",
+        measurementId: "G-6PV2WPJPPX",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      console.log(analytics);
+    </script>
     <script src="./js/login.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script></script>
   </body>
 </html>

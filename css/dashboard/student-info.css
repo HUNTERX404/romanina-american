@@ -1,0 +1,116 @@
+@import url("../style.css");
+
+body {
+  color: white;
+  font-family: "FranklinGothicBook";
+}
+.layout {
+  background-image: linear-gradient(
+    to right top,
+    #1b2f5c,
+    #152852,
+    #0f2149,
+    #091b3f,
+    #041436
+  );
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+.nav {
+  width: 250px;
+  position: fixed;
+  min-height: calc(100vh - 5%);
+  border-radius: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: white;
+  align-items: center;
+  padding: 1rem 0rem;
+  transition: all 0.3s ease;
+  color: var(--primary-color);
+}
+.list-group-item-action {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  border: none;
+}
+.arrow-back:hover{
+cursor: pointer;
+}
+.nav-pills .nav-link{
+color: var(--primary-color);
+padding: 0.2rem 0.5rem;
+}
+.nav-link.active{
+    border-bottom: 1px var(--danger-color) solid;
+    color:var(--danger-color) !important;
+    background-color: transparent !important;
+}
+.list-group-item-action.active {
+  background-color: white;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-bottom: 2px solid var(--danger-color);
+  font-weight: bold;
+}
+.list-group-item-action:hover {
+  background-color: #1b2e5c17;
+  color: var(--danger-color);
+}
+.close-button {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: var(--danger-color);
+  background-color: #1b2e5c17;
+}
+.requests-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.1rem;
+}
+.card{
+  overflow: hidden;
+}
+.card-body{
+  background-color: rgba(4, 20, 54, 0.1);
+}
+.card-title{
+  color: var(--danger-color);
+}
+.card-text{
+  color: var(--primary-color);
+}
+.btn-primary{
+  background-color: var(--secondary-color);
+  border: var(--secondary-color);
+}
+.btn-primary:hover{
+background-color: #ca8b39;
+}
+@media (min-width: 992px) {
+  .nav {
+    position: static;
+    min-height: 100vh;
+    border-radius: 0;
+    transform: translateY(0);
+  }
+  .close-button {
+    display: none;
+  }
+}
