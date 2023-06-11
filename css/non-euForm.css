@@ -7,7 +7,9 @@ body {
   font-family: "FranklinGothicBook";
   background-blend-mode: multiply;
 }
-
+.button-submit:disabled {
+  background-color: #911d21 !important;
+}
 .input::placeholder {
   color: #1b2e5c8e;
 }

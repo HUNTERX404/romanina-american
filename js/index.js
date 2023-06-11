@@ -1,18 +1,19 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
 import {
+  getFirestore,
   collection,
-  getDocs,
-  addDoc,
-  Timestamp,
-} from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
-import {
-  query,
-  orderBy,
-  limit,
-  where,
   onSnapshot,
+  addDoc,
+  setDoc,
+  deleteDoc,
+  doc,
+  query,
+  where,
+  orderBy,
+  serverTimestamp,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+
 // Import the functions you need from the SDKs you need
 // import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -20,25 +21,34 @@ import {
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+import {
+  getAuth,
+  onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 const firebaseConfig = {
-  apiKey: "AIzaSyD-YvrMUkAiFVngWqGK4FsbH5V8BR3WkUQ",
-  authDomain: "test-96772.firebaseapp.com",
-  projectId: "test-96772",
-  storageBucket: "test-96772.appspot.com",
-  messagingSenderId: "1035837406206",
-  appId: "1:1035837406206:web:aa0420e328261adfc31eaf",
-  measurementId: "G-6PV2WPJPPX",
+  apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
+  authDomain: "romanian-american.firebaseapp.com",
+  projectId: "romanian-american",
+  storageBucket: "romanian-american.appspot.com",
+  messagingSenderId: "26442140157",
+  appId: "1:26442140157:web:e5252e4968ecd748157194",
+  measurementId: "G-FTTL8TF09G",
 };
 initializeApp(firebaseConfig);
-const data = getFirestore();
-const colRef = collection(data, "books");
-getDocs(colRef).then((snapshot) => {
-  snapshot.docs.forEach((doc) => {
-    let books = [];
-    books.push({ ...doc.data(), id: doc.id });
-    console.log(books)
-  });
-});
-// Initialize Firebase
-// const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
+// init services
+const db = getFirestore();
+const auth = getAuth();
+
+export {
+  db,
+  doc,
+  updateDoc,
+  addDoc,
+  collection,
+  auth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  setDoc,
+};

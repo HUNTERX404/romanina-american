@@ -32,80 +32,80 @@
             <p class="mb-0">sign in</p>
             <p class="fs-6 fw-normal">(NON-EU/EEA STUDENTS)</p>
           </div>
-          <form
-            class="w-100 d-flex flex-column justify-content-center"
-            onsubmit="onSubmit(event)"
-          >
-          <div class="input-group overflow-hidden rounded-4 mb-4">
+          <form class="w-100 d-flex flex-column justify-content-center">
+            <div class="input-group overflow-hidden rounded-4 mb-4">
               <label
-                for="EuropassCV"
+                for="AuthorizedTranslation"
                 class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
               >
                 Authorized translation of the current transcript of records
                 <input
+                  required
                   type="file"
-                  id=" EuropassCV"
+                  id="AuthorizedTranslation"
                   class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <div class="input-group overflow-hidden rounded-4 mb-4">
               <label
-                for="EuropassCV"
+                for="MedicalCertificate"
                 class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
               >
                 Medical certificate
                 <input
+                  required
                   type="file"
-                  id=" EuropassCV"
+                  id="MedicalCertificate"
                   class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <div class="input-group overflow-hidden rounded-4 mb-4">
               <label
-                for="EuropassCV"
+                for="ValidHealth"
                 class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
               >
                 Valid health insurance
                 <input
+                  required
                   type="file"
-                  id=" EuropassCV"
+                  id="ValidHealth"
                   class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <div class="input-group overflow-hidden rounded-4 mb-4">
               <label
-                for="EuropassCV"
+                for="LetterOfConfirmation"
                 class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
               >
-                Letter of con7rmation from home institution
+                Letter of confirmation from home institution
                 <input
+                  required
                   type="file"
-                  id=" EuropassCV"
+                  id="LetterOfConfirmation"
                   class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <div class="input-group overflow-hidden rounded-4 mb-5">
               <label
-                for="EuropassCV"
+                for="CopyOfTheTravelDocuments"
                 class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
               >
                 Copy of the travel documents
                 <input
+                  required
                   type="file"
-                  id=" EuropassCV"
+                  id="CopyOfTheTravelDocuments"
                   class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <button
               type="submit"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-              class="w-100 p-3 border-0 rounded shadow-danger bg-danger text-white"
+              class="w-100 p-3 border-0 rounded shadow-danger bg-danger text-white button-submit"
             >
               sign in
             </button>
@@ -127,40 +127,14 @@
         </div>
       </div>
     </div>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div
-        class="modal-dialog modal-dialog-centered gap-5 w-100 flex-column flex-sm-row mx-auto justify-content-center"
-      >
-        <div class="modal-content flex-shrink-0">
-          <a href="./login.html" class="h-100 w-100">
-            <button class="text-white w-100 h-100">
-              NON-EU/EEA <br />
-              STUDENTS
-            </button>
-          </a>
-        </div>
-        <div class="modal-content flex-shrink-0">
-          <a href="./login.html" class="h-100 w-100">
-            <button class="text-white w-100 h-100">
-              EU/EEA <br />
-              STUDENTS
-            </button>
-          </a>
-        </div>
-      </div>
-    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/signup.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script type="module" src="./js/index.js"></script>
+    <script src="./js/nonEuForm.js" type="module"></script>
   </body>
 </html>

@@ -15,8 +15,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <link href="./css/toastr.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Material Icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/toastr.min.css">
+    <link rel="stylesheet" href="./css/register.css" />
     <title>Romanian America University</title>
   </head>
   <body>
@@ -25,7 +30,7 @@
         class="row w-100 mx-auto h-100 justify-content-center justify-content-md-between"
       >
         <div
-          class="col-md-6 col-lg-5 d-flex flex-column justify-content-md-center align-items-md-center order-1 order-md-0"
+          class="col-md-6 col-lg-7 d-flex flex-column justify-content-md-center align-items-md-center order-1 order-md-0"
         >
           <form class="w-100 auth">
             <div
@@ -37,51 +42,134 @@
               <p class="mb-0">Romanian-American</p>
               <p class="mb-0">University</p>
             </div>
-            <div class="input-group overflow-hidden rounded-4 mb-4">
-              <i
-                class="fa-solid fa-user-graduate fs-4 p-3 bg-white border-0 text-primary"
-              ></i>
-
-              <input
-                required
-                type="email"
-                name="email"
-                class="form-control border-0 input text-primary"
-                placeholder="email"
-              />
-            </div>
-            <div class="input-group overflow-hidden rounded-4 mb-5">
-              <i
-                class="fa-solid fa-key fs-4 p-3 bg-white border-0 text-primary"
-              ></i>
-
-              <input
-                required
-                type="password"
-                name="password"
-                class="form-control border-0 input text-primary"
-                placeholder="Password"
-              />
-            </div>
-
-            <div>
-              <button
-                type="submit"
-                class="w-100 p-3 border-0 rounded shadow-danger bg-danger text-white"
-              >
-                login
-              </button>
-              <div class="text-center mt-2 text-white fs-5">
-                <p>
-                  don't have account ?
-                  <a
-                    href="./register.html"
-                    class="text-secondary fw-bolder link-underline link-underline-opacity-0"
-                    >signup</a
+            <div class="row">
+              <div class="col-12">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
                   >
-                </p>
+                    perm_identity
+                  </span>
+                  <input
+                    type="text"
+                    required
+                    name="name"
+                    class="form-control border-0 input text-primary"
+                    placeholder="Full Name"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
+                  >
+                    email
+                  </span>
+                  <input
+                    required
+                    type="email"
+                    name="email"
+                    class="form-control border-0 input text-primary"
+                    placeholder="email"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
+                  >
+                    key
+                  </span>
+
+                  <input
+                    required
+                    type="password"
+                    name="password"
+                    class="form-control border-0 input text-primary"
+                    placeholder="Password"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
+                  >
+                    apartment
+                  </span>
+
+                  <input
+                    type="text"
+                    required
+                    name="university"
+                    class="form-control border-0 input text-primary"
+                    placeholder="form University"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
+                  >
+                    calendar_today
+                  </span>
+                  <input
+                    type="number"
+                    max="6"
+                    maxlength="1"
+                    required
+                    name="academeYear"
+                    class="form-control border-0 input text-primary"
+                    placeholder="academe Year"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <span
+                    class="material-icons p-3 bg-white border-0 text-primary"
+                  >
+                    border_color
+                  </span>
+
+                  <input
+                    type="text"
+                    required
+                    name="specialist"
+                    class="form-control border-0 input text-primary"
+                    placeholder="specialist"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="input-group overflow-hidden rounded-4 mb-4">
+                  <i
+                    class="fa-solid fa-user-graduate fs-4 p-3 bg-white border-0 text-primary"
+                  ></i>
+                  <select
+                    required
+                    name="transitionDuration"
+                    id="transitionDuration"
+                    class="form-control border-0 input text-primary"
+                  >
+                    <option value="year" selected disabled>
+                      transitionDuration
+                    </option>
+                    <option value="year">year</option>
+                    <option value="session">session</option>
+                  </select>
+                </div>
               </div>
             </div>
+            <button
+              type="submit"
+              class="w-100 p-3 border-0 rounded shadow-danger mb-4 bg-danger text-white button-submit"
+            >
+              register
+            </button>
           </form>
         </div>
         <div
@@ -129,7 +217,6 @@
     <script src="./js/toastr.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
     <script src="./js/index.js" type="module"></script>
-    <script src="./js/login.js" type="module"></script>
-    <script></script>
+    <script src="./js/register.js" type="module"></script>
   </body>
 </html>
