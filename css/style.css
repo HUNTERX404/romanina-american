@@ -8,6 +8,10 @@
   font-family: FranklinGothicBook;
   src: url("../fonts/Franklin\ Gothic\ Book\ Regular.ttf");
 }
+@font-face {
+  font-family: LucidaFaxRegular;
+  src: url("../fonts/Lucida\ Fax\ Regular.ttf");
+}
 /* reset main colors */
 .text-primary {
   color: var(--primary-color) !important;
@@ -23,9 +27,8 @@
 
 .text-danger {
   color: var(--danger-color) !important;
-}ٍ
-
-.bg-primary {
+}
+ٍ .bg-primary {
   background-color: var(--primary-color) !important;
 }
 
@@ -39,30 +42,30 @@
 .bg-danger {
   background-color: var(--danger-color) !important;
 }
-.btn-primary{
+.btn-primary {
   background-color: var(--primary-color) !important;
   color: white;
   border: var(--primary-color) !important;
 }
-.btn-danger{
+.btn-danger {
   background-color: var(--danger-color) !important;
   color: white;
   border: var(--danger-color) !important;
 }
-.btn-secondary{
+.btn-secondary {
   background-color: var(--secondary-color) !important;
   color: white;
   border: var(--secondary-color);
 }
-.btn-success{
+.btn-success {
   background-color: var(--success-color) !important;
   color: white;
   border: var(--success-color);
 }
-.form-control:focus{
+.form-control:focus {
   box-shadow: none;
 }
 
-.modal{
-  background-color: rgba(255, 255, 255,0.7);
+.modal {
+  background-color: rgba(255, 255, 255, 0.7);
 }

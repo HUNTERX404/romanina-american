@@ -12,6 +12,7 @@ import {
   orderBy,
   serverTimestamp,
   updateDoc,
+  getDocs,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
 
 // Import the functions you need from the SDKs you need
@@ -40,7 +41,8 @@ initializeApp(firebaseConfig);
 // init services
 const db = getFirestore();
 const auth = getAuth();
-
+// collection ref
+const colRef = collection(db, "students");
 export {
   db,
   doc,
@@ -51,4 +53,10 @@ export {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   setDoc,
+  getDocs,
+  colRef,
+  onSnapshot,
+  query,
+  where,
+  getFirestore,
 };

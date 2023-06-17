@@ -19,6 +19,7 @@ body {
     #091b3f,
     #041436
   );
+  background-attachment: fixed;
 }
 .nav {
   width: 250px;
@@ -27,15 +28,20 @@ body {
   border-radius: 20px;
   top: 50%;
   transform: translateY(-50%);
-  left: 20px;
+  left: -1000px;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   background-color: white;
   align-items: center;
   padding: 1rem 0rem;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
   color: var(--primary-color);
+}
+.nav.active {
+  top: 50%;
+  left: 20px;
 }
 .list-group-item-action {
   color: var(--primary-color);
@@ -49,8 +55,7 @@ body {
   display: none;
 }
 .input-search {
-  width: 300px;
-  max-width: 40%;
+  width: 55%;
 }
 .table-container {
   overflow-x: auto;
@@ -128,7 +133,7 @@ body {
     border-radius: 0;
     transform: translateY(0);
   }
-  .close-button {
-    display: none;
+  .input-search {
+    max-width: 300px;
   }
 }

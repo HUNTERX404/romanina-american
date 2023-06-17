@@ -10,17 +10,59 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <!-- icons -->
+    <!-- Material Icons -->
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/resault-request.css" />
     <title>Romanian America University</title>
   </head>
   <body>
     <div class="container min-vh-100 position-relative">
-      <div class="box-request">ffff</div>
+      <span
+        class="material-icons position-absolute start-0 text-white fs-2 back-icon"
+      >
+        arrow_back
+      </span>
+      <div class="box-request">
+        <!-- loading -->
+        <div class="text-center loading">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <!-- success -->
+        <div
+          class="d-flex align-items-center text-success gap-1 success d-none"
+        >
+          <p class="m-0 fw-semibold fs-5">
+            Your application has been approved, now you are an Erathmus student
+            at the Roman American University
+          </p>
+          <span class="material-icons fs-2"> how_to_reg </span>
+        </div>
+        <!-- waiting -->
+        <div
+          class="d-flex align-items-center text-secondary gap-1 waiting d-none"
+        >
+          <p class="m-0 fw-semibold fs-5">
+            Your application is still awaiting approval
+          </p>
+          <span class="material-icons fs-2"> pending </span>
+        </div>
+        <!-- reject -->
+        <div class="d-flex flex-column text-danger gap-1 reject d-none">
+          <p class="m-0 fw-semibold fs-5">
+            Sorry, but your request has been rejected
+          </p>
+          <p class="reject-message">The reason:</p>
+        </div>
+      </div>
     </div>
+    <script src="./js/jquery-3.7.0.min.js"></script>
+    <script src="./js/toastr.min.js"></script>
+    <script src="./js/index.js" type="module"></script>
+    <script type="module" src="./js/resultRequest.js"></script>
   </body>
 </html>

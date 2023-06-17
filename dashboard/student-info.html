@@ -26,144 +26,168 @@
   <body>
     <div class="layout">
       <main class="w-100 container p-5">
-        <div class="bg-white p-4 pb-0 rounded position-relative">
-          <div class="position-absolute text-primary">
-            <span class="material-icons fs-2 arrow-back"> arrow_back </span>
-          </div>
-          <div class="w-100">
-            <h2 class="text-danger text-center mt-0">Nour Samman</h2>
-          </div>
-          <div class="d-flex gap-3 justify-content-end">
-            <button class="btn btn-secondary px-md-4 px-lg-5 py-2">
-              Accept
-            </button>
-            <button class="btn btn-danger px-md-4 px-lg-5 py-2">Reject</button>
-          </div>
-          <ul
-            class="nav-pills d-flex p-0 list-unstyled pt-4 mb-0 bg-white justify-content-evenly"
-            id="pills-tab"
-            role="tablist"
-          >
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link active border-3 rounded-0"
-                id="pills-personal-info-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-personal-info"
-                type="button"
-                role="tab"
-                aria-controls="pills-personal-info"
-                aria-selected="true"
-              >
-                Personal Information
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link border-3 rounded-0"
-                id="pills-medical-certificate-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-medical-certificate"
-                type="button"
-                role="tab"
-                aria-controls="pills-medical-certificate"
-                aria-selected="true"
-              >
-                medical certificate
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link border-3 rounded-0"
-                id="pills-profile-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-profile"
-                type="button"
-                role="tab"
-                aria-controls="pills-profile"
-                aria-selected="false"
-              >
-                Valid health insurance
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link border-3 rounded-0"
-                id="pills-contact-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-contact"
-                type="button"
-                role="tab"
-                aria-controls="pills-contact"
-                aria-selected="false"
-              >
-                Confirmation letter from home institution
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button
-                class="nav-link border-3 rounded-0"
-                id="pills-disabled-tab"
-                data-bs-toggle="pill"
-                data-bs-target="#pills-disabled"
-                type="button"
-                role="tab"
-                aria-controls="pills-disabled"
-                aria-selected="false"
-              >
-                Copy of the travel documents
-              </button>
-            </li>
-          </ul>
-        </div>
+        <!-- loading data -->
         <div
-          class="tab-content bg-white p-4 text-primary rounded mt-5"
-          id="pills-tabContent"
+          class="bg-white p-5 rounded table-container text-primary text-center loading-data"
         >
-          <div
-            class="tab-pane fade show active"
-            id="pills-personal-info"
-            role="tabpanel"
-            aria-labelledby="pills-personal-info-tab"
-            tabindex="0"
-          >
-            personal-info
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div class="data d-none">
+          <div class="bg-white p-4 pb-0 rounded position-relative">
+            <div class="position-absolute text-primary">
+              <span class="material-icons fs-2 arrow-back"> arrow_back </span>
+            </div>
+            <div class="w-100">
+              <h2 class="text-danger text-center mt-0">Nour Samman</h2>
+            </div>
+            <div class="d-flex gap-3 justify-content-end request-buttons">
+              <button class="btn btn-secondary px-md-4 px-lg-5 py-2 accept-request">
+                Accept
+              </button>
+              <button class="btn btn-danger px-md-4 px-lg-5 py-2">Reject</button>
+            </div>
+            <ul
+              class="nav-pills d-flex p-0 list-unstyled pt-4 mb-0 bg-white justify-content-evenly"
+              id="pills-tab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active border-3 rounded-0"
+                  id="pills-personal-info-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-personal-info"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-personal-info"
+                  aria-selected="true"
+                >
+                  Personal Information
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link border-3 rounded-0"
+                  id="pills-medical-certificate-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-medical-certificate"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-medical-certificate"
+                  aria-selected="true"
+                >
+                  medical certificate
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link border-3 rounded-0"
+                  id="pills-profile-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-profile"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-profile"
+                  aria-selected="false"
+                >
+                  Valid health insurance
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link border-3 rounded-0"
+                  id="pills-contact-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-contact"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-contact"
+                  aria-selected="false"
+                >
+                  Confirmation letter from home institution
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link border-3 rounded-0"
+                  id="pills-disabled-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#pills-disabled"
+                  type="button"
+                  role="tab"
+                  aria-controls="pills-disabled"
+                  aria-selected="false"
+                >
+                  Copy of the travel documents
+                </button>
+              </li>
+            </ul>
           </div>
           <div
-            class="tab-pane fade show"
-            id="pills-medical-certificate"
-            role="tabpanel"
-            aria-labelledby="pills-medical-certificate-tab"
-            tabindex="0"
+            class="tab-content bg-white p-4 text-primary rounded mt-5"
+            id="pills-tabContent"
           >
-            medical-certificate
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pills-profile"
-            role="tabpanel"
-            aria-labelledby="pills-profile-tab"
-            tabindex="0"
-          >
-            ...
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pills-contact"
-            role="tabpanel"
-            aria-labelledby="pills-contact-tab"
-            tabindex="0"
-          >
-            ...
-          </div>
-          <div
-            class="tab-pane fade"
-            id="pills-disabled"
-            role="tabpanel"
-            aria-labelledby="pills-disabled-tab"
-            tabindex="0"
-          >
-            ...
+            <div
+              class="tab-pane fade show active"
+              id="pills-personal-info"
+              role="tabpanel"
+              aria-labelledby="pills-personal-info-tab"
+              tabindex="0"
+            >
+              <embed
+                src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodation?alt=media&token=83ce9ba8-ae9b-46cb-8fbb-8b95ae284623"
+                width="300"
+                height="300"
+              />
+              <embed
+                src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodation?alt=media&token=83ce9ba8-ae9b-46cb-8fbb-8b95ae284623"
+                width="300"
+                height="300"
+              />
+              <embed
+                src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodation?alt=media&token=83ce9ba8-ae9b-46cb-8fbb-8b95ae284623"
+                width="300"
+                height="300"
+              />
+            </div>
+            <div
+              class="tab-pane fade show"
+              id="pills-medical-certificate"
+              role="tabpanel"
+              aria-labelledby="pills-medical-certificate-tab"
+              tabindex="0"
+            >
+              medical-certificate
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-profile"
+              role="tabpanel"
+              aria-labelledby="pills-profile-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-contact"
+              role="tabpanel"
+              aria-labelledby="pills-contact-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
+            <div
+              class="tab-pane fade"
+              id="pills-disabled"
+              role="tabpanel"
+              aria-labelledby="pills-disabled-tab"
+              tabindex="0"
+            >
+              ...
+            </div>
           </div>
         </div>
       </main>
@@ -178,5 +202,9 @@
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/jquery-3.7.0.min.js"></script>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/index.js" type="module"></script>
+    <script type="module" src="../js/dashboard/studentInformation.js"></script>
   </body>
 </html>

@@ -10,11 +10,6 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -53,74 +48,21 @@
       </nav>
       <main class="w-100 container p-5">
         <h2>Requests</h2>
-        <div class="bg-white p-4 rounded">
-          <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column justify-content-between gap-4">
-                  <div>
-                    <h5 class="card-title fw-bolder">Name of student</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-primary">show details</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column justify-content-between gap-4">
-                  <div>
-                    <h5 class="card-title fw-bolder">Card title</h5>
-                    <p class="card-text">This is a short card.</p>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column justify-content-between gap-4">
-                  <div>
-                    <h5 class="card-title fw-bolder">Card title</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content.
-                    </p>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card h-100">
-                <div class="card-body d-flex flex-column justify-content-between gap-4">
-                  <div>
-                    <h5 class="card-title fw-bolder">Card title</h5>
-                    <p class="card-text">
-                      This is a longer card with supporting text below as a
-                      natural lead-in to additional content. This content is a
-                      little bit longer.
-                    </p>
-                  </div>
-                  <div>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <!-- loading data -->
+        <div
+          class="bg-white p-5 rounded table-container text-primary text-center loading-data"
+        >
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
           </div>
+        </div>
+        <div class="bg-white p-4 rounded data d-none">
+          <div class="row row-cols-1 row-cols-md-3 g-4 requests"></div>
         </div>
       </main>
     </div>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/index.js" type="module"></script>
+    <script type="module" src="../js/dashboard/requests.js"></script>
   </body>
 </html>

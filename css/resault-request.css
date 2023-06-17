@@ -24,6 +24,12 @@ body {
   border-radius: 15px;
   background: #ffff;
 }
+.back-icon {
+  top: 1.5rem;
+}
+.back-icon:hover {
+  cursor: pointer;
+}
 @media (min-width: 576px) {
   body {
     background: url("../images/resault-request.jpg"), rgba(27, 46, 92, 0.5);

@@ -1,22 +1,5 @@
-import {
-  doc,
-  db,
-  updateDoc,
-  addDoc,
-  collection,
-  signInWithEmailAndPassword,
-  auth,
-} from "./index.js";
-const firebaseConfig = {
-  apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
-  authDomain: "romanian-american.firebaseapp.com",
-  projectId: "romanian-american",
-  storageBucket: "romanian-american.appspot.com",
-  messagingSenderId: "26442140157",
-  appId: "1:26442140157:web:e5252e4968ecd748157194",
-  measurementId: "G-FTTL8TF09G",
-};
-firebase.initializeApp(firebaseConfig);
+import { signInWithEmailAndPassword, auth, db, onSnapshot } from "./index.js";
+
 let form = document.forms[0];
 form.addEventListener("submit", onSubmit);
 const signupForm = document.querySelector(".auth");
@@ -26,9 +9,8 @@ function onSubmit(event) {
   const password = signupForm.password.value;
   signInWithEmailAndPassword(auth, email, password)
     .then((cred) => {
-      console.log(cred);
       localStorage.setItem("token", cred.user.uid);
-      // window.location.href = "./signup.html";
+      checkFiles(cred.user.uid);
     })
     .catch((err) => {
       toastr["error"](err.message, "error title");
@@ -50,4 +32,33 @@ function onSubmit(event) {
         hideMethod: "fadeOut",
       };
     });
+}
+function checkFiles(id) {
+  const docRef = doc(db, "students", id);
+  onSnapshot(docRef, (doc) => {
+    const data = doc.data();
+    if (
+      !data.ApplicationForm ||
+      !data.Accommodation ||
+      !data.EuropassCV ||
+      !data.ProofofEnglish ||
+      !data.CopyofthePassport ||
+      !data.LearningAgreement
+    ) {
+      window.location.href = "signup.html";
+    } else if (data.EUStudent && !data.EuropeanHealth) {
+      window.location.href = "euForm.html";
+    } else if (
+      !data.EUStudent &&
+      (!data.CopyOfTheTravelDocuments ||
+        !data.LetterOfConfirmation ||
+        !data.ValidHealth ||
+        !data.MedicalCertificate ||
+        !data.AuthorizedTranslation)
+    ) {
+      window.location.href = "non-euForm.html";
+    } else {
+      window.location.href = "result-request.html";
+    }
+  });
 }

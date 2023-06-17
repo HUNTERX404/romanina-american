@@ -26,8 +26,9 @@ const LearningAgreementInput = document.getElementById("LearningAgreement");
 const CopyofthePassportInput = document.getElementById("CopyofthePassport");
 const AccommodationInput = document.getElementById("Accommodation");
 document.querySelector(".button-submit").disabled = true;
-document.querySelector(".modal-link").classList.add("d-none");
-document.querySelector(".loading").classList.add("d-block");
+document.querySelector(".back-icon").addEventListener("click", () => {
+  history.back();
+});
 
 ProofofEnglishInput.addEventListener("change", changedFileData);
 AccommodationInput.addEventListener("change", changedFileData);
@@ -88,7 +89,7 @@ function checkData() {
 }
 
 function UploadFile(fileItem, fileName) {
-  let storageRef = firebase.storage().ref("folders/" + fileName);
+  let storageRef = firebase.storage().ref("folders/" + fileName+localStorage.getItem("token"));
   let uploadTask = storageRef.put(fileItem);
   document.querySelector(".button-submit").disabled = true;
 
@@ -101,7 +102,8 @@ function UploadFile(fileItem, fileName) {
       console.log(error);
     },
     () => {
-      uploadTask.snapshot.ref.getDownloadURL().then((url) => {
+      storageRef.getDownloadURL().then((url) => {
+        console.log(url)
         urlsFiles[fileName] = url;
         if (Object.keys(urlsFiles).length === 6) {
           const userId = localStorage.getItem("token");
@@ -114,9 +116,8 @@ function UploadFile(fileItem, fileName) {
             CopyofthePassport: urlsFiles["CopyofthePassport"],
             LearningAgreement: urlsFiles["LearningAgreement"],
           }).then(() => {
-            document.querySelector(".modal-link").classList.remove("d-none");
-            document.querySelector(".loading").classList.remove("d-block");
             document.querySelector(".loading").classList.add("d-none");
+            document.querySelector(".modal-link").classList.remove("d-none");
             document.querySelector(".button-submit").disabled = false;
           });
         }

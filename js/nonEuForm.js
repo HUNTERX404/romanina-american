@@ -1,4 +1,5 @@
 import { doc, db, updateDoc } from "./index.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
   authDomain: "romanian-american.firebaseapp.com",
@@ -11,11 +12,12 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 let form = document.forms[0];
 let urlsFiles = {};
-let CopyOfTheTravelDocuments = "";
-let LetterOfConfirmation = "";
-let ValidHealth = "";
-let MedicalCertificate = "";
 let AuthorizedTranslation = "";
+let MedicalCertificate = "";
+let ValidHealth = "";
+let LetterOfConfirmation = "";
+let CopyOfTheTravelDocuments = "";
+let OptionalRequirementsDocument = "";
 const CopyOfTheTravelDocumentsInput = document.getElementById(
   "CopyOfTheTravelDocuments"
 );
@@ -27,13 +29,19 @@ const MedicalCertificateInput = document.getElementById("MedicalCertificate");
 const AuthorizedTranslationInput = document.getElementById(
   "AuthorizedTranslation"
 );
+const OptionalRequirementsDocumentInput = document.getElementById(
+  "OptionalRequirementsDocument"
+);
 document.querySelector(".button-submit").disabled = true;
-
+document.querySelector(".back-icon").addEventListener("click", () => {
+  history.back();
+});
 CopyOfTheTravelDocumentsInput.addEventListener("change", changedFileData);
 ValidHealthInput.addEventListener("change", changedFileData);
 MedicalCertificateInput.addEventListener("change", changedFileData);
 AuthorizedTranslationInput.addEventListener("change", changedFileData);
 LetterOfConfirmationInput.addEventListener("change", changedFileData);
+OptionalRequirementsDocumentInput.addEventListener("change", changedFileData);
 form.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
@@ -43,6 +51,9 @@ function onSubmit(event) {
   UploadFile(ValidHealth, "ValidHealth");
   UploadFile(MedicalCertificate, "MedicalCertificate");
   UploadFile(AuthorizedTranslation, "AuthorizedTranslation");
+  if (OptionalRequirementsDocument) {
+    UploadFile(OptionalRequirementsDocument, "OptionalRequirementsDocument");
+  }
 }
 
 function changedFileData(event) {
@@ -62,6 +73,9 @@ function changedFileData(event) {
       break;
     case "MedicalCertificate":
       MedicalCertificate = event.target.files[0];
+      break;
+    case "OptionalRequirementsDocument":
+      OptionalRequirementsDocument = event.target.files[0];
       break;
   }
   checkData();
@@ -106,10 +120,14 @@ function UploadFile(fileItem, fileName) {
             ValidHealth: urlsFiles["ValidHealth"],
             MedicalCertificate: urlsFiles["MedicalCertificate"],
             AuthorizedTranslation: urlsFiles["AuthorizedTranslation"],
+            OptionalRequirementsDocument: OptionalRequirementsDocument
+              ? urlsFiles["OptionalRequirementsDocument"]
+              : "",
             EUStudent: false,
+            isWaiting: true,
           }).then(() => {
             document.querySelector(".button-submit").disabled = false;
-            window.location.href = "./result-request.html";
+            window.location.href = "/result-request.html";
           });
         }
       });

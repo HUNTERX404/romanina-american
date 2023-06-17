@@ -10,10 +10,10 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <!-- icons -->
+    <!-- Material Icons -->
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/signup.css" />
     <title>Romanian America University</title>
@@ -21,14 +21,20 @@
   <body>
     <div class="container w-100 mx-auto vh-100 min-vh-100">
       <div
-        class="row pt-5 w-100 mx-auto h-100 justify-content-center justify-content-md-between"
+        class="row pt-5 w-100 mx-auto h-100 justify-content-center justify-content-md-between position-relative"
       >
+        <span
+          class="material-icons position-absolute top-5 start-0 text-white fs-2 back-icon"
+        >
+          arrow_back
+        </span>
+
         <div
           class="col-md-5 d-flex flex-column justify-content-md-center align-items-md-center order-1 order-md-0"
         >
           <form action="" class="w-100">
             <div
-              class="text-white mb-5 fs-2 fw-semibold text-center d-flex flex-column"
+              class="text-white mb-4 fs-2 fw-semibold text-center d-flex flex-column"
             >
               <p class="mb-0">sign in</p>
             </div>
@@ -143,7 +149,7 @@
               type="submit"
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
-              class="w-100 p-3 border-0 rounded shadow-danger bg-danger text-white button-submit"
+              class="w-100 p-3 mb-4 border-0 rounded shadow-danger bg-danger text-white button-submit"
             >
               next
             </button>
@@ -178,15 +184,17 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div
-        class="modal-dialog modal-dialog-centered gap-5 w-100 flex-column flex-sm-row mx-auto justify-content-center"
-      >
-        <div class="modal-content flex-shrink-0 loading">
-          <div class="h-100 w-100">
-            <button class="text-white w-100 h-100">loading</button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="d-flex justify-content-center align-items-center w-100 loading">
+          <div class="modal-content loading">
+            <div class="h-100 w-100">
+              <button class="text-white w-100 h-100">loading</button>
+            </div>
           </div>
         </div>
-        <div class="modal-link">
+        <div
+          class="d-flex gap-5 w-100 flex-column flex-sm-row mx-auto justify-content-center align-items-center modal-link d-none"
+        >
           <div class="modal-content flex-shrink-0">
             <a href="./non-euForm.html" class="h-100 w-100">
               <button class="text-white w-100 h-100">

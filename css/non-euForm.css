@@ -10,6 +10,9 @@ body {
 .button-submit:disabled {
   background-color: #911d21 !important;
 }
+.back-icon:hover{
+  cursor: pointer;
+}
 .input::placeholder {
   color: #1b2e5c8e;
 }

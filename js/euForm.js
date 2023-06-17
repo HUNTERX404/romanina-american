@@ -1,4 +1,5 @@
 import { doc, db, updateDoc } from "./index.js";
+
 const firebaseConfig = {
   apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
   authDomain: "romanian-american.firebaseapp.com",
@@ -17,7 +18,12 @@ let EuropeanHealth = "";
 const EuropeanHealthInput = document.getElementById("EuropeanHealth");
 
 document.querySelector(".button-submit").disabled = true;
-
+document.querySelector(".back-icon").addEventListener("click", () => {
+  history.back();
+});
+document.querySelector(".back-icon").addEventListener("click", () => {
+  history.back();
+});
 EuropeanHealthInput.addEventListener("change", changedFileData);
 
 form.addEventListener("submit", onSubmit);
@@ -31,7 +37,7 @@ function changedFileData(event) {
   const name = event.target.name;
   switch (name) {
     case "EuropeanHealth":
-      ApplicationForm = event.target.files[0];
+      EuropeanHealth = event.target.files[0];
       break;
   }
   checkData();
@@ -66,9 +72,11 @@ function UploadFile(fileItem, fileName) {
         updateDoc(docRef, {
           EuropeanHealth: urlsFiles["EuropeanHealth"],
           EUStudent: true,
+          isWaiting: true,
         }).then(() => {
           document.querySelector(".button-submit").disabled = false;
-          window.location.href = "./result-request.html";
+                      window.location.href = "/result-request.html";
+
         });
       });
     }

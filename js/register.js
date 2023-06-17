@@ -1,12 +1,7 @@
 import {
   doc,
-  db,
-  updateDoc,
-  addDoc,
-  setDoc,
-  collection,
-  createUserWithEmailAndPassword,
-  auth,
+  db, setDoc, createUserWithEmailAndPassword,
+  auth
 } from "./index.js";
 
 let form = document.forms[0];

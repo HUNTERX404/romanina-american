@@ -7,6 +7,9 @@ body {
   background-blend-mode: multiply;
   font-family: "FranklinGothicBook";
 }
+.back-icon:hover{
+  cursor: pointer;
+}
 .button-submit:disabled {
   background-color: #911d21 !important;
 }

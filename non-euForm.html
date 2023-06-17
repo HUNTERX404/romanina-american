@@ -10,10 +10,10 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <!-- icons -->
+    <!-- Material Icons -->
     <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="stylesheet" href="./css/non-euForm.css" />
     <title>Romanian America University</title>
@@ -21,8 +21,13 @@
   <body>
     <div class="container w-100 mx-auto vh-100 min-vh-100">
       <div
-        class="row pt-5 w-100 mx-auto h-100 justify-content-center justify-content-md-between"
+        class="row pt-5 w-100 mx-auto h-100 justify-content-center justify-content-md-between position-relative"
       >
+        <span
+          class="material-icons position-absolute top-5 start-0 text-white fs-2 back-icon"
+        >
+          arrow_back
+        </span>
         <div
           class="col-md-5 d-flex flex-column justify-content-md-center align-items-md-start"
         >
@@ -40,8 +45,10 @@
               >
                 Authorized translation of the current transcript of records
                 <input
+                  name="AuthorizedTranslation"
                   required
                   type="file"
+                  accept=".doc,.docx,.pdf"
                   id="AuthorizedTranslation"
                   class="rounded-4 overflow-hidden"
                 />
@@ -54,6 +61,8 @@
               >
                 Medical certificate
                 <input
+                  accept=".doc,.docx,.pdf"
+                  name="MedicalCertificate"
                   required
                   type="file"
                   id="MedicalCertificate"
@@ -68,6 +77,8 @@
               >
                 Valid health insurance
                 <input
+                  accept=".doc,.docx,.pdf"
+                  name="ValidHealth"
                   required
                   type="file"
                   id="ValidHealth"
@@ -82,6 +93,8 @@
               >
                 Letter of confirmation from home institution
                 <input
+                  accept=".doc,.docx,.pdf"
+                  name="LetterOfConfirmation"
                   required
                   type="file"
                   id="LetterOfConfirmation"
@@ -89,20 +102,40 @@
                 />
               </label>
             </div>
-            <div class="input-group overflow-hidden rounded-4 mb-5">
-              <label
-                for="CopyOfTheTravelDocuments"
-                class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
-              >
-                Copy of the travel documents
-                <input
-                  required
-                  type="file"
-                  id="CopyOfTheTravelDocuments"
-                  class="rounded-4 overflow-hidden"
-                />
-              </label>
+            <div class="d-flex gap-4">
+              <div class="input-group overflow-hidden rounded-4 mb-4">
+                <label
+                  for="CopyOfTheTravelDocuments"
+                  class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                >
+                  Copy of the travel documents
+                  <input
+                    accept=".doc,.docx,.pdf"
+                    name="CopyOfTheTravelDocuments"
+                    required
+                    type="file"
+                    id="CopyOfTheTravelDocuments"
+                    class="rounded-4 overflow-hidden"
+                  />
+                </label>
+              </div>
+              <div class="input-group overflow-hidden rounded-4 mb-4">
+                <label
+                  for="OptionalRequirementsDocument"
+                  class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                >
+                  optional requirements document
+                  <input
+                    accept=".doc,.docx,.pdf"
+                    name="OptionalRequirementsDocument"
+                    type="file"
+                    id="OptionalRequirementsDocument"
+                    class="rounded-4 overflow-hidden"
+                  />
+                </label>
+              </div>
             </div>
+
             <button
               type="submit"
               class="w-100 p-3 border-0 rounded shadow-danger bg-danger text-white button-submit"

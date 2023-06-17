@@ -10,11 +10,6 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <!-- icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
     <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -25,8 +20,8 @@
   </head>
   <body>
     <div class="layout">
-      <nav class="nav">
-        <span class="material-icons close-button">close</span>
+      <nav class="nav active">
+        <span class="material-icons close-button d-lg-none">close</span>
         <div class="">
           <div class="d-flex align-items-center mb-4 px-2 pt-4">
             <img src="../images/logo.svg" class="w-25" alt="logo" />
@@ -51,9 +46,22 @@
           </div>
         </div>
       </nav>
-      <main class="w-100 container p-5">
-        <h2>Dashboard</h2>
-        <div class="bg-white p-4 rounded table-container">
+      
+      <main class="container pt-3 overflow-y-auto">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2 class="m-0">Dashboard</h2>
+          <span class="material-icons fs-1 pt-2 ps-3 menu-icon d-lg-none"> menu </span>
+        </div>
+        <!-- loading data -->
+        <div
+          class="bg-white p-5 rounded table-container text-primary text-center loading-data"
+        >
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <!-- data table -->
+        <div class="bg-white p-4 rounded table-container data-table d-none">
           <div class="w-100 d-flex justify-content-end">
             <div class="input-search pb-2">
               <input
@@ -67,7 +75,7 @@
           <table class="table" id="myTable">
             <thead>
               <tr>
-                <th scope="col">#</th>
+                <th scope="col" class="d-none">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">University</th>
                 <th scope="col">specialties</th>
@@ -75,128 +83,7 @@
                 <th scope="col">show</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td class="w-auto">
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">3</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td class="w-auto">
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">6</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons show-icon"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">7</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td class="w-auto">
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">8</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">9</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">10</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td class="w-auto">
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">11</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">12</th>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>
-                  <span class="material-icons"> visibility </span>
-                </td>
-              </tr>
-            </tbody>
+            <tbody class="table-body"></tbody>
           </table>
         </div>
       </main>
@@ -206,21 +93,8 @@
       type="text/javascript"
       src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"
     ></script>
-
-    <script>
-      $(document).ready(function () {
-        var dataTable = $("#myTable").dataTable({
-          dom: "<f<t><'d-flex justify-content-between align-items-center'lp>>",
-          ordering: false,
-          aLengthMenu: [
-            [5, 10, 15, 20, 50, 100, -1],
-            [5, 10, 15, 20, 50, 100, "All"],
-          ],
-        });
-        $("#searchbox").keyup(function () {
-          dataTable.fnFilter(this.value);
-        });
-      });
-    </script>
+    <script src="../js/toastr.min.js"></script>
+    <script src="../js/index.js" type="module"></script>
+    <script type="module" src="../js/dashboard/index.js"></script>
   </body>
 </html>
