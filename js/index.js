@@ -27,6 +27,7 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signOut,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 const firebaseConfig = {
   apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
@@ -59,4 +60,5 @@ export {
   query,
   where,
   getFirestore,
+  signOut,
 };

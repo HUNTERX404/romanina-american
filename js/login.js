@@ -1,8 +1,14 @@
-import { signInWithEmailAndPassword, auth, db, onSnapshot,doc } from "./index.js";
+import {
+  signInWithEmailAndPassword,
+  auth,
+  db,
+  onSnapshot, doc
+} from "./index.js";
 
 let form = document.forms[0];
 form.addEventListener("submit", onSubmit);
 const signupForm = document.querySelector(".auth");
+
 function onSubmit(event) {
   event.preventDefault();
   const email = signupForm.email.value;
@@ -10,6 +16,9 @@ function onSubmit(event) {
   signInWithEmailAndPassword(auth, email, password)
     .then((cred) => {
       localStorage.setItem("token", cred.user.uid);
+      if (cred.user.uid === "sC68VdPqpzbRSf5NFQIbAXB7GuQ2") {
+        window.location.href = "dashboard/index.html";
+      }
       checkFiles(cred.user.uid);
     })
     .catch((err) => {

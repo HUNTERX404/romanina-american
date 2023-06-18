@@ -1,26 +1,30 @@
-import { colRef, onSnapshot, query, where } from "../index.js";
+import { auth, colRef, onSnapshot, query, signOut, where } from "../index.js";
 
 let students = [];
 // queries
 const q = query(colRef, where("isAccepted", "==", true));
 // realtime collection data
-onSnapshot(q, (snapshot) => {
-  snapshot.docs.forEach((doc) => {
-    students.push({ ...doc.data(), id: doc.id });
+  onSnapshot(q, (snapshot) => {
+    snapshot.docs.forEach((doc) => {
+      students.push({ ...doc.data(), id: doc.id });
+    });
+    fillData();
   });
-  fillData();
+document.addEventListener("load", () => {
+
 });
 document.querySelector(".close-button").addEventListener("click", () => {
   document.querySelector(".nav").classList.remove("active");
 });
-document.querySelector(".menu-icon").addEventListener("click",()=>{
+document.querySelector(".menu-icon").addEventListener("click", () => {
   document.querySelector(".nav").classList.toggle("active");
-
 });
+
 function fillData() {
   document.querySelector(".loading-data").classList.add("d-none");
   document.querySelector(".data-table").classList.remove("d-none");
   const tableBody = document.querySelector(".table-body");
+  console.log(students)
   students.forEach((student) => {
     const studentRow = `<tr>
                 <td class="d-none">${student.id}</td>
