@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword, auth, db, onSnapshot } from "./index.js";
+import { signInWithEmailAndPassword, auth, db, onSnapshot,doc } from "./index.js";
 
 let form = document.forms[0];
 form.addEventListener("submit", onSubmit);

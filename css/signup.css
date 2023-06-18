@@ -34,6 +34,9 @@ input[type="file"]:hover {
 .button-submit:disabled {
   background-color: #911d21 !important;
 }
+.back-icon:hover{
+  cursor: pointer;
+}
 .image2 {
   aspect-ratio: 4/4;
   object-fit: cover;

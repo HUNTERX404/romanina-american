@@ -52,7 +52,9 @@ function checkData() {
 }
 
 function UploadFile(fileItem, fileName) {
-  let storageRef = firebase.storage().ref("folders/" + fileName);
+  let storageRef = firebase
+    .storage()
+    .ref(`folders/${localStorage.getItem("token")}/` + fileName);
   let uploadTask = storageRef.put(fileItem);
   document.querySelector(".button-submit").disabled = true;
 

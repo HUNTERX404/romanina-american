@@ -13,13 +13,19 @@ document.querySelector(".back-icon").addEventListener("click", () => {
 function fillData(student) {
   if (student.isWaiting) {
     document.querySelector(".box-request .waiting").classList.remove("d-none");
+    document.querySelector(".box-request .reject").classList.add("d-none");
+    document.querySelector(".box-request .success").classList.add("d-none");
   } else {
     if (student.isAccepted) {
       document
         .querySelector(".box-request .success")
         .classList.remove("d-none");
+      document.querySelector(".box-request .waiting").classList.add("d-none");
+      document.querySelector(".box-request .reject").classList.add("d-none");
     } else {
       document.querySelector(".box-request .reject").classList.remove("d-none");
+      document.querySelector(".box-request .waiting").classList.add("d-none");
+      document.querySelector(".box-request .success").classList.add("d-none");
       document.querySelector(
         ".reject-message"
       ).innerHTML = `The reason <br> ${student.rejectedMessage}`;
