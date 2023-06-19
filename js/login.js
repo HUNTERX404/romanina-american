@@ -17,7 +17,7 @@ function onSubmit(event) {
     .then((cred) => {
       localStorage.setItem("token", cred.user.uid);
       if (cred.user.uid === "sC68VdPqpzbRSf5NFQIbAXB7GuQ2") {
-        window.location.href = "dashboard/index.html";
+        window.location.href = "./dashboard/index.html";
       }
       checkFiles(cred.user.uid);
     })
