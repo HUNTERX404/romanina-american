@@ -16,6 +16,15 @@ body {
 .input::placeholder {
   color: #1b2e5c8e;
 }
+.input-group label {
+  transition: all 0.3s ease;
+}
+.invalid {
+  border: 3px solid var(--danger-color);
+}
+.valid {
+  border: 3px solid var(--success-color);
+}
 .input:focus {
   border: none;
   outline: none;

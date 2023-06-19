@@ -53,21 +53,75 @@ function changedFileData(event) {
   switch (name) {
     case "ApplicationForm":
       ApplicationForm = event.target.files[0];
+      if (ApplicationFormInput.value) {
+        document
+          .querySelector("[for=ApplicationForm]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=ApplicationForm]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "EuropassCV":
       EuropassCV = event.target.files[0];
+      if (EuropassCVInput.value) {
+        document
+          .querySelector("[for=EuropassCV]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=EuropassCV]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "LearningAgreement":
       LearningAgreement = event.target.files[0];
+      if (LearningAgreementInput.value) {
+        document
+          .querySelector("[for=LearningAgreement]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=LearningAgreement]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "CopyofthePassport":
       CopyofthePassport = event.target.files[0];
+      if (CopyofthePassportInput.value) {
+        document
+          .querySelector("[for=CopyofthePassport]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=CopyofthePassport]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "Accommodation":
       Accommodation = event.target.files[0];
+      if (AccommodationInput.value) {
+        document
+          .querySelector("[for=Accommodation]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=Accommodation]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "ProofofEnglish":
       ProofofEnglish = event.target.files[0];
+      if (ProofofEnglishInput.value) {
+        document
+          .querySelector("[for=ProofofEnglish]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=ProofofEnglish]")
+          .classList.replace("valid", "invalid");
+      }
       break;
   }
   checkData();
@@ -105,7 +159,7 @@ function UploadFile(fileItem, fileName) {
     },
     () => {
       storageRef.getDownloadURL().then((url) => {
-        console.log(url)
+        console.log(url);
         urlsFiles[fileName] = url;
         if (Object.keys(urlsFiles).length === 6) {
           const userId = localStorage.getItem("token");

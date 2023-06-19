@@ -38,6 +38,15 @@ function changedFileData(event) {
   switch (name) {
     case "EuropeanHealth":
       EuropeanHealth = event.target.files[0];
+      if (EuropeanHealthInput.value) {
+        document
+          .querySelector("[for=EuropeanHealth]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=EuropeanHealth]")
+          .classList.replace("valid", "invalid");
+      }
       break;
   }
   checkData();
@@ -77,8 +86,7 @@ function UploadFile(fileItem, fileName) {
           isWaiting: true,
         }).then(() => {
           document.querySelector(".button-submit").disabled = false;
-                      window.location.href = "/result-request.html";
-
+          window.location.href = "./result-request.html";
         });
       });
     }

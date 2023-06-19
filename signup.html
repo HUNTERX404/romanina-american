@@ -46,10 +46,10 @@
                 >enter here</a
               >
             </p>
-            <div class="input-group overflow-hidden rounded-4 mb-4">
+            <div class="input-group mb-4">
               <label
                 for="ApplicationForm"
-                class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                class="fs-6 p-3 rounded-4 bg-white text-primary position-relative w-100 text-center invalid"
               >
                 Application Form
                 <input
@@ -58,14 +58,13 @@
                   type="file"
                   id="ApplicationForm"
                   name="ApplicationForm"
-                  class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
-            <div class="input-group overflow-hidden rounded-4 mb-4">
+            <div class="input-group mb-4">
               <label
                 for="EuropassCV"
-                class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                class="fs-6 p-3 rounded-4 bg-white text-primary position-relative w-100 text-center invalid"
               >
                 Europass CV – in English, with picture (CV guide)
                 <input
@@ -74,14 +73,13 @@
                   required
                   name="EuropassCV"
                   id="EuropassCV"
-                  class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
-            <div class="input-group overflow-hidden rounded-4 mb-4">
+            <div class="input-group mb-4">
               <label
                 for="LearningAgreement"
-                class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                class="fs-6 p-3 rounded-4 bg-white text-primary position-relative w-100 text-center invalid"
               >
                 Learning Agreement for Studies (Guide)
                 <input
@@ -90,14 +88,13 @@
                   required
                   id="LearningAgreement"
                   name="LearningAgreement"
-                  class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
-            <div class="input-group overflow-hidden rounded-4 mb-4">
+            <div class="input-group mb-4">
               <label
                 for="CopyofthePassport"
-                class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                class="fs-6 p-3 bg-white rounded-4 text-primary position-relative w-100 text-center invalid"
               >
                 Copy of the Passport / ID document
                 <input
@@ -106,15 +103,14 @@
                   type="file"
                   id="CopyofthePassport"
                   name="CopyofthePassport"
-                  class="rounded-4 overflow-hidden"
                 />
               </label>
             </div>
             <div class="d-flex gap-4">
-              <div class="input-group overflow-hidden rounded-4 mb-4">
+              <div class="input-group mb-4">
                 <label
                   for="Accommodation"
-                  class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                  class="fs-6 p-3 bg-white rounded-4 text-primary position-relative w-100 text-center invalid"
                 >
                   Accommodation form
                   <input
@@ -127,10 +123,10 @@
                   />
                 </label>
               </div>
-              <div class="input-group overflow-hidden rounded-4 mb-4">
+              <div class="input-group mb-4">
                 <label
-                  for="EuropassCV"
-                  class="fs-6 p-3 bg-white border-0 text-primary position-relative w-100 text-center"
+                  for="ProofofEnglish"
+                  class="fs-6 p-3 bg-white rounded-4 text-primary position-relative w-100 text-center invalid"
                 >
                   Proof of English skills
                   <input
@@ -185,7 +181,9 @@
       aria-hidden="true"
     >
       <div class="modal-dialog modal-dialog-centered">
-        <div class="d-flex justify-content-center align-items-center w-100 loading">
+        <div
+          class="d-flex justify-content-center align-items-center w-100 loading"
+        >
           <div class="modal-content loading">
             <div class="h-100 w-100">
               <button class="text-white w-100 h-100">loading</button>

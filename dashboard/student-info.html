@@ -40,20 +40,28 @@
               <span class="material-icons fs-2 arrow-back"> arrow_back </span>
             </div>
             <div class="w-100">
-              <h2 class="text-danger text-center mt-0">Nour Samman</h2>
+              <h2 class="text-danger text-center mt-4 student-name"></h2>
             </div>
             <div class="d-flex gap-3 justify-content-end request-buttons">
-              <button class="btn btn-secondary px-md-4 px-lg-5 py-2 accept-request">
+              <button
+                class="btn btn-secondary px-md-4 px-lg-5 py-2 accept-request"
+              >
                 Accept
               </button>
-              <button class="btn btn-danger px-md-4 px-lg-5 py-2">Reject</button>
+              <button
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModalToggle"
+                class="btn btn-danger px-md-4 px-lg-5 py-2"
+              >
+                Reject
+              </button>
             </div>
             <ul
-              class="nav-pills d-flex p-0 list-unstyled pt-4 mb-0 bg-white justify-content-evenly"
+              class="nav nav-pills p-0 list-unstyled pt-4 mb-0 bg-white justify-content-evenly"
               id="pills-tab"
               role="tablist"
             >
-              <li class="nav-item flex-shrink-0" role="presentation">
+              <li class="nav-item" role="presentation">
                 <button
                   class="nav-link active border-3 rounded-0"
                   id="pills-personal-info-tab"
@@ -67,7 +75,7 @@
                   Personal Information
                 </button>
               </li>
-              <li class="nav-item flex-shrink-0" role="presentation">
+              <li class="nav-item" role="presentation">
                 <button
                   class="nav-link border-3 rounded-0"
                   id="pills-medical-certificate-tab"
@@ -81,7 +89,7 @@
                   medical certificate
                 </button>
               </li>
-              <li class="nav-item flex-shrink-0" role="presentation">
+              <li class="nav-item" role="presentation">
                 <button
                   class="nav-link border-3 rounded-0"
                   id="pills-profile-tab"
@@ -95,7 +103,7 @@
                   Valid health insurance
                 </button>
               </li>
-              <li class="nav-item flex-shrink-0" role="presentation">
+              <li class="nav-item" role="presentation">
                 <button
                   class="nav-link border-3 rounded-0"
                   id="pills-contact-tab"
@@ -109,7 +117,7 @@
                   Confirmation letter from home institution
                 </button>
               </li>
-              <li class="nav-item flex-shrink-0" role="presentation">
+              <li class="nav-item" role="presentation">
                 <button
                   class="nav-link border-3 rounded-0"
                   id="pills-disabled-tab"
@@ -135,9 +143,7 @@
               role="tabpanel"
               aria-labelledby="pills-personal-info-tab"
               tabindex="0"
-            >
-
-            </div>
+            ></div>
             <div
               class="tab-pane fade show"
               id="pills-medical-certificate"
@@ -145,7 +151,34 @@
               aria-labelledby="pills-medical-certificate-tab"
               tabindex="0"
             >
-              <embed src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodationL0sM0u1spwWh9jrRVCv3LFdhaqv1?alt=media&token=b096a478-a7b8-4037-9644-b2738bb2254b" type="">
+              <div class="row w-100">
+                <div class="col-12 col-sm-6 col-md-3">
+                  <embed
+                    src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodationL0sM0u1spwWh9jrRVCv3LFdhaqv1?alt=media&token=b096a478-a7b8-4037-9644-b2738bb2254b"
+                    width="300"
+                    height="300"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                  <embed
+                    src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodationL0sM0u1spwWh9jrRVCv3LFdhaqv1?alt=media&token=b096a478-a7b8-4037-9644-b2738bb2254b"
+                    width="200"
+                    height="200"
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                  <embed
+                    src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodationL0sM0u1spwWh9jrRVCv3LFdhaqv1?alt=media&token=b096a478-a7b8-4037-9644-b2738bb2254b"
+                    type=""
+                  />
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                  <embed
+                    src="https://firebasestorage.googleapis.com/v0/b/romanian-american.appspot.com/o/folders%2FAccommodationL0sM0u1spwWh9jrRVCv3LFdhaqv1?alt=media&token=b096a478-a7b8-4037-9644-b2738bb2254b"
+                    type=""
+                  />
+                </div>
+              </div>
             </div>
             <div
               class="tab-pane fade"
@@ -177,6 +210,91 @@
           </div>
         </div>
       </main>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalToggle"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h2
+              class="modal-title text-primary fs-5"
+              id="exampleModalToggleLabel"
+            >
+              Are you sure you want to reject this student?
+            </h2>
+            <button
+              type="button"
+              class="btn-close text-primary"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+              Close
+            </button>
+            <button
+              class="btn btn-danger"
+              data-bs-target="#exampleModalToggle2"
+              data-bs-toggle="modal"
+            >
+              reject
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModalToggle2"
+      aria-hidden="true"
+      aria-labelledby="exampleModalToggleLabel2"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header border-0">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <label for="message" class="text-primary"
+                >enter the reason of reject
+              </label>
+              <div
+                class="input-group overflow-hidden rounded-4 border border-primary"
+              >
+                <input
+                  type="text"
+                  name="message"
+                  required
+                  id="messageReject"
+                  class="form-control border-0 input text-primary"
+                  placeholder="message of reject"
+                />
+              </div>
+            </div>
+            <div class="modal-footer border-0">
+              <button class="button-submit btn btn-danger rejct-button">
+                reject
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

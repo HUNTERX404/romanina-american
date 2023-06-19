@@ -61,21 +61,75 @@ function changedFileData(event) {
   switch (name) {
     case "AuthorizedTranslation":
       AuthorizedTranslation = event.target.files[0];
+      if (AuthorizedTranslationInput.value) {
+        document
+          .querySelector("[for=AuthorizedTranslation]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=AuthorizedTranslation]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "CopyOfTheTravelDocuments":
       CopyOfTheTravelDocuments = event.target.files[0];
+      if (CopyOfTheTravelDocumentsInput.value) {
+        document
+          .querySelector("[for=CopyOfTheTravelDocuments]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=CopyOfTheTravelDocuments]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "LetterOfConfirmation":
       LetterOfConfirmation = event.target.files[0];
+      if (LetterOfConfirmationInput.value) {
+        document
+          .querySelector("[for=LetterOfConfirmation]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=LetterOfConfirmation]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "ValidHealth":
       ValidHealth = event.target.files[0];
+      if (ValidHealthInput.value) {
+        document
+          .querySelector("[for=ValidHealth]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=ValidHealth]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "MedicalCertificate":
       MedicalCertificate = event.target.files[0];
+      if (MedicalCertificateInput.value) {
+        document
+          .querySelector("[for=MedicalCertificate]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=MedicalCertificate]")
+          .classList.replace("valid", "invalid");
+      }
       break;
     case "OptionalRequirementsDocument":
       OptionalRequirementsDocument = event.target.files[0];
+      if (OptionalRequirementsDocumentInput.value) {
+        document
+          .querySelector("[for=OptionalRequirementsDocument]")
+          .classList.replace("invalid", "valid");
+      } else {
+        document
+          .querySelector("[for=OptionalRequirementsDocument]")
+          .classList.replace("valid", "invalid");
+      }
       break;
   }
   checkData();
@@ -129,7 +183,7 @@ function UploadFile(fileItem, fileName) {
             isWaiting: true,
           }).then(() => {
             document.querySelector(".button-submit").disabled = false;
-            window.location.href = "/result-request.html";
+            window.location.href = "./result-request.html";
           });
         }
       });

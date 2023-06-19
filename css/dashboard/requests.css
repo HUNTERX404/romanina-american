@@ -37,6 +37,7 @@ body {
   padding: 1rem 0rem;
   transition: all 0.3s ease;
   color: var(--primary-color);
+  z-index: 10;
 }
 .list-group-item-action {
   color: var(--primary-color);
