@@ -11,6 +11,12 @@ onSnapshot(q, (snapshot) => {
   });
   fillData();
 });
+document.querySelector(".close-button").addEventListener("click", () => {
+  document.querySelector(".nav").classList.remove("active");
+});
+document.querySelector(".menu-icon").addEventListener("click", () => {
+  document.querySelector(".nav").classList.toggle("active");
+});
 function fillData() {
   document.querySelector(".loading-data").classList.add("d-none");
   document.querySelector(".data").classList.remove("d-none");

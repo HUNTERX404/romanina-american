@@ -43,10 +43,37 @@ body {
   top: 50%;
   left: 20px;
 }
+.menu-icon:hover {
+  cursor: pointer;
+}
 .list-group-item-action {
   color: var(--primary-color);
   transition: all 0.3s ease;
   border: none;
+}
+.close-button {
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+}
+.close-button:hover {
+  cursor: pointer;
+  color: var(--danger-color);
+  background-color: #1b2e5c17;
+}
+.list-group-item-action.active {
+  background-color: white;
+  color: var(--danger-color);
+  border-color: var(--danger-color);
+  border-bottom: 2px solid var(--danger-color);
+  font-weight: bold;
+}
+.list-group-item-action:hover {
+  background-color: #1b2e5c17;
+  color: var(--danger-color);
 }
 .dataTables_filter {
   display: none;
@@ -102,30 +129,8 @@ body {
 .dataTables_length label {
   color: var(--primary-color);
 }
-.list-group-item-action.active {
-  background-color: white;
-  color: var(--danger-color);
-  border-color: var(--danger-color);
-  border-bottom: 2px solid var(--danger-color);
-  font-weight: bold;
-}
-.list-group-item-action:hover {
-  background-color: #1b2e5c17;
-  color: var(--danger-color);
-}
-.close-button {
-  position: absolute;
-  top: 0rem;
-  right: 0rem;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-  border-radius: 50%;
-}
-.close-button:hover {
-  cursor: pointer;
-  color: var(--danger-color);
-  background-color: #1b2e5c17;
-}
+
+
 @media (min-width: 992px) {
   .nav {
     position: static;

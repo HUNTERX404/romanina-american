@@ -10,9 +10,6 @@ const q = query(colRef, where("isAccepted", "==", true));
     });
     fillData();
   });
-document.addEventListener("load", () => {
-
-});
 document.querySelector(".close-button").addEventListener("click", () => {
   document.querySelector(".nav").classList.remove("active");
 });
