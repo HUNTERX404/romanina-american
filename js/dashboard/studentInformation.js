@@ -109,6 +109,9 @@ function fillData() {
                                     </div>
                                   </div>`;
   if (student.EUStudent) {
+    document
+      .getElementById("pills-non-Eu-information-documents-tab")
+      .classList.add("d-none");
     pillsEuInformationDocuments.innerHTML = `<div class="row gy-4">
                                     <div class="col-sm-6 col-md-4">
                                         <span class="fw-semibold">EuropeanHealth : </span>
@@ -116,6 +119,9 @@ function fillData() {
                                     </div>
                                   </div>`;
   } else {
+    document
+      .getElementById("pills-Eu-information-documents-tab")
+      .classList.add("d-none");
     nonEuInformationDocuments.innerHTML = `<div class="row gy-4">
                                     <div class="col-sm-6 col-md-4">
                                         <span class="fw-semibold">Copy Of The Travel Documents : </span>
