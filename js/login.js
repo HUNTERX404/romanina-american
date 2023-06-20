@@ -19,7 +19,9 @@ function onSubmit(event) {
       if (cred.user.uid === "sC68VdPqpzbRSf5NFQIbAXB7GuQ2") {
         window.location.href = "./dashboard/index.html";
       }
-      checkFiles(cred.user.uid);
+      else{
+        checkFiles(cred.user.uid);
+      }
     })
     .catch((err) => {
       toastr["error"](err.message, "error title");

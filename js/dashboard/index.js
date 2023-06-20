@@ -4,24 +4,29 @@ let students = [];
 // queries
 const q = query(colRef, where("isAccepted", "==", true));
 // realtime collection data
-  onSnapshot(q, (snapshot) => {
-    snapshot.docs.forEach((doc) => {
-      students.push({ ...doc.data(), id: doc.id });
-    });
-    fillData();
+onSnapshot(q, (snapshot) => {
+  snapshot.docs.forEach((doc) => {
+    students.push({ ...doc.data(), id: doc.id });
   });
+  fillData();
+});
 document.querySelector(".close-button").addEventListener("click", () => {
   document.querySelector(".nav").classList.remove("active");
 });
 document.querySelector(".menu-icon").addEventListener("click", () => {
   document.querySelector(".nav").classList.toggle("active");
 });
-
+document.querySelector(".logout").addEventListener("click", () => {
+  signOut(auth).then(() => {
+    localStorage.clear();
+    window.location.href = "/";
+  });
+});
 function fillData() {
   document.querySelector(".loading-data").classList.add("d-none");
   document.querySelector(".data-table").classList.remove("d-none");
   const tableBody = document.querySelector(".table-body");
-  console.log(students)
+  console.log(students);
   students.forEach((student) => {
     const studentRow = `<tr>
                 <td class="d-none">${student.id}</td>
