@@ -29,6 +29,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
+import { getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
 const firebaseConfig = {
   apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
   authDomain: "romanian-american.firebaseapp.com",
@@ -60,5 +61,6 @@ export {
   query,
   where,
   getFirestore,
+  getDownloadURL,
   signOut,
 };
