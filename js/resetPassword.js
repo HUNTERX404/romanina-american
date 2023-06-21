@@ -1,4 +1,4 @@
-import { sendPasswordResetEmail } from "./index.js";
+import { auth, sendPasswordResetEmail } from "./index.js";
 
 let form = document.forms[0];
 form.addEventListener("submit", onSubmit);
@@ -10,7 +10,7 @@ const signupForm = document.querySelector(".auth");
 function onSubmit(event) {
   event.preventDefault();
   const email = signupForm.email.value;
-  sendPasswordResetEmail(email)
+  sendPasswordResetEmail(auth,email)
     .then(() => {})
     .catch((err) => {
       toastr["error"](err.message, "error title");
