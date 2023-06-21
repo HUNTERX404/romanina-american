@@ -34,7 +34,7 @@ const OptionalRequirementsDocumentInput = document.getElementById(
 );
 document.querySelector(".button-submit").disabled = true;
 document.querySelector(".back-icon").addEventListener("click", () => {
-  history.back();
+  window.location.href = "./signup.html";
 });
 CopyOfTheTravelDocumentsInput.addEventListener("change", changedFileData);
 ValidHealthInput.addEventListener("change", changedFileData);

@@ -19,10 +19,7 @@ const EuropeanHealthInput = document.getElementById("EuropeanHealth");
 
 document.querySelector(".button-submit").disabled = true;
 document.querySelector(".back-icon").addEventListener("click", () => {
-  history.back();
-});
-document.querySelector(".back-icon").addEventListener("click", () => {
-  history.back();
+  window.location.href = "./signup.html";
 });
 EuropeanHealthInput.addEventListener("change", changedFileData);
 

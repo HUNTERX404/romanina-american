@@ -1,16 +1,22 @@
 import { doc, db, onSnapshot } from "./index.js";
 
 const id = localStorage.getItem("token");
+let student;
 // fetching a single document (& realtime)
 const docRef = doc(db, "students", id); // queries
 // realtime collection data
 onSnapshot(docRef, (doc) => {
-  fillData(doc.data());
+  student = doc.data();
+  fillData();
 });
 document.querySelector(".back-icon").addEventListener("click", () => {
-  history.back();
+  if (student.EUStudent) {
+    window.location.href = "./euFrom.html";
+  } else {
+    window.location.href = "./non-euFrom.html";
+  }
 });
-function fillData(student) {
+function fillData() {
   if (student.isWaiting) {
     document.querySelector(".box-request .waiting").classList.remove("d-none");
     document.querySelector(".box-request .reject").classList.add("d-none");
