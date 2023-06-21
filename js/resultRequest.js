@@ -16,6 +16,20 @@ document.querySelector(".back-icon").addEventListener("click", () => {
     window.location.href = "./non-euFrom.html";
   }
 });
+document.querySelector(".re-auth").addEventListener("click", () => {
+  setDoc(docRef, {
+    name: student.name,
+    academeYear: student.academeYear,
+    University: student.University,
+    specialist: student.specialist,
+    transitionDuration: student.transitionDuration,
+    isAccepted: false,
+    isWaiting: true,
+    rejectedMessage: rejectedMessage.value,
+  }).then(() => {
+    window.location.href = "/";
+  });
+});
 function fillData() {
   if (student.isWaiting) {
     document.querySelector(".box-request .waiting").classList.remove("d-none");

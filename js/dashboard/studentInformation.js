@@ -21,7 +21,6 @@ const pillsEuInformationDocuments = document.getElementById(
 const nonEuInformationDocuments = document.getElementById(
   "non-Eu-information-documents"
 );
-// const pillsPersonalInfo = document.getElementById("pills-personal-info");
 
 onSnapshot(docRef, (doc) => {
   student = doc.data();
@@ -167,12 +166,7 @@ function fillData() {
 function onRejectSubmit(event) {
   event.preventDefault();
   const rejectedMessage = document.getElementById("messageReject");
-  setDoc(docRef, {
-    name: student.name,
-    academeYear: student.academeYear,
-    University: student.University,
-    specialist: student.specialist,
-    transitionDuration: student.transitionDuration,
+  updateDoc(docRef, {
     isAccepted: false,
     isWaiting: false,
     rejectedMessage: rejectedMessage.value,
