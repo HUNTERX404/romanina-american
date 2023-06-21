@@ -4,6 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position-y: -100%;
+  background-attachment: fixed;
   background-position-x: center;
   font-family: "FranklinGothicBook";
   background-blend-mode: multiply;
@@ -16,7 +17,12 @@ body {
   border: none;
   outline: none;
 }
-
+.button-submit:disabled {
+  background-color: #911d21 !important;
+}
+.back-icon:hover {
+  cursor: pointer;
+}
 .logo {
   object-fit: cover;
   width: 60%;

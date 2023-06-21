@@ -28,6 +28,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 import { getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
 const firebaseConfig = {
@@ -63,4 +64,5 @@ export {
   getFirestore,
   getDownloadURL,
   signOut,
+  sendPasswordResetEmail,
 };
