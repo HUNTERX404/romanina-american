@@ -1,4 +1,4 @@
-import { doc, db, onSnapshot } from "./index.js";
+import { doc, db, onSnapshot, setDoc } from "./index.js";
 
 const id = localStorage.getItem("token");
 let student;
@@ -25,7 +25,6 @@ document.querySelector(".re-auth").addEventListener("click", () => {
     transitionDuration: student.transitionDuration,
     isAccepted: false,
     isWaiting: true,
-    rejectedMessage: rejectedMessage.value,
   }).then(() => {
     window.location.href = "/";
   });
