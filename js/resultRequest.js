@@ -44,7 +44,7 @@ document.querySelector(".re-auth").addEventListener("click", () => {
       LetterOfConfirmation: "",
       CopyOfTheTravelDocuments: "",
     }).then(() => {
-      window.location.href = "/";
+      window.location.href = "./result-request.html";
     });
   }
 });
