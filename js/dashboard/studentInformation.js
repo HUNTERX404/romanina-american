@@ -19,7 +19,7 @@ const pillsEuInformationDocuments = document.getElementById(
   "pills-Eu-information-documents"
 );
 const nonEuInformationDocuments = document.getElementById(
-  "non-Eu-information-documents"
+  "pills-non-Eu-information-documents"
 );
 
 onSnapshot(docRef, (doc) => {

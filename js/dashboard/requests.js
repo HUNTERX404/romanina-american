@@ -1,6 +1,5 @@
 import { colRef, onSnapshot, query, where } from "../index.js";
 
-
 let students = [];
 // queries
 const q = query(colRef, where("isWaiting", "==", true));
@@ -21,7 +20,13 @@ function fillData() {
   document.querySelector(".loading-data").classList.add("d-none");
   document.querySelector(".data").classList.remove("d-none");
   const container = document.querySelector(".requests");
-  if(students.length>0){
+  const containerNoData = document.querySelector(".requests-no-data");
+  console.log(students.length);
+  if (students.length > 0) {
+    document.querySelector(".data").classList.remove("d-none");
+    container.classList.remove("d-none");
+    containerNoData.classList.add("d-none");
+
     students.forEach((student) => {
       const studentRequest = `<div class="col">
                 <div class="card h-100">
@@ -42,13 +47,10 @@ function fillData() {
               </div>`;
       container.innerHTML += studentRequest;
     });
-  }
-  else{
-    container.innerHTML = `<div class="d-flex justify-content-center align-items-center gap-2 w-100">
-                              <span class="material-icons text-primary fs-2">
-                                info
-                              </span>
-                              <p class="m-0 text-primary fs-4 fw-semibold">no have any requests</p>
-                            </div>`;
+  } else {
+    console.log("test");
+    document.querySelector(".data").classList.add("d-none");
+    container.classList.add("d-none");
+    containerNoData.classList.remove("d-none");
   }
 }
