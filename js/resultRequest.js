@@ -1,4 +1,4 @@
-import { doc, db, onSnapshot, setDoc } from "./index.js";
+import { doc, db, onSnapshot, setDoc, updateDoc } from "./index.js";
 
 const id = localStorage.getItem("token");
 let student;
@@ -17,16 +17,36 @@ document.querySelector(".back-icon").addEventListener("click", () => {
   }
 });
 document.querySelector(".re-auth").addEventListener("click", () => {
-  setDoc(docRef, {
-    name: student.name,
-    academeYear: student.academeYear,
-    University: student.University,
-    specialist: student.specialist,
-    transitionDuration: student.transitionDuration,
-    isAccepted: false,
-  }).then(() => {
-    window.location.href = "./";
-  });
+  if (student.EUStudent) {
+    updateDoc(docRef, {
+      LearningAgreement: "",
+      CopyofthePassport: "",
+      ProofofEnglish: "",
+      EuropassCV: "",
+      ApplicationForm: "",
+      Accommodation: "",
+      EuropeanHealth: "",
+    }).then(() => {
+      window.location.href = "/";
+    });
+  } else {
+    updateDoc(docRef, {
+      LearningAgreement: "",
+      CopyofthePassport: "",
+      ProofofEnglish: "",
+      EuropassCV: "",
+      ApplicationForm: "",
+      Accommodation: "",
+      OptionalRequirementsDocument: "",
+      AuthorizedTranslation: "",
+      MedicalCertificate: "",
+      ValidHealth: "",
+      LetterOfConfirmation: "",
+      CopyOfTheTravelDocuments: "",
+    }).then(() => {
+      window.location.href = "/";
+    });
+  }
 });
 function fillData() {
   if (student.isWaiting) {
