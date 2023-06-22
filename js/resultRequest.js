@@ -24,9 +24,8 @@ document.querySelector(".re-auth").addEventListener("click", () => {
     specialist: student.specialist,
     transitionDuration: student.transitionDuration,
     isAccepted: false,
-    isWaiting: true,
   }).then(() => {
-    window.location.href = "/";
+    window.location.href = "./";
   });
 });
 function fillData() {
