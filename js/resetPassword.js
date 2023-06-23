@@ -8,6 +8,7 @@ document.querySelector(".back-icon").addEventListener("click", () => {
 const signupForm = document.querySelector(".auth");
 
 function onSubmit(event) {
+  
   event.preventDefault();
   const email = signupForm.email.value;
   sendPasswordResetEmail(auth, email)

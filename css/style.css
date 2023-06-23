@@ -1,3 +1,4 @@
+@import "./anicollection.css"; 
 :root {
   --primary-color: #1b2f5c;
   --secondary-color: #e59f41;
@@ -12,6 +13,7 @@
   font-family: LucidaFaxRegular;
   src: url("../fonts/Lucida\ Fax\ Regular.ttf");
 }
+
 /* reset main colors */
 .text-primary {
   color: var(--primary-color) !important;
