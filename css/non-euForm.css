@@ -6,6 +6,7 @@ body {
   background-position: center;
   font-family: "FranklinGothicBook";
   background-blend-mode: multiply;
+  overflow-x: hidden;
 }
 .button-submit:disabled {
   background-color: #911d21 !important;

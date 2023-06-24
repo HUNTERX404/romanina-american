@@ -6,6 +6,7 @@ body {
   background-position: center;
   background-blend-mode: multiply;
   font-family: "FranklinGothicBook";
+  overflow: hidden;
 }
 .back-icon:hover{
   cursor: pointer;
@@ -56,10 +57,8 @@ input[type="file"]:hover {
   object-fit: cover;
   position: absolute;
   object-position: center;
-  left: 50%;
   aspect-ratio: 16/10;
   top: 45%;
-  transform: translateX(-40%);
 }
 .input-group label {
   font-size: 0.7rem !important;

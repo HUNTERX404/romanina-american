@@ -5,6 +5,7 @@ body {
   background-size: cover;
   background-position: center;
   background-blend-mode: multiply;
+  overflow-x: hidden;
 }
 
 .input::placeholder {

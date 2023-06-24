@@ -64,6 +64,48 @@ body {
   border-radius: 50%;
   transform: translate(-30%, 50%);
 }
+/*base code*/
+.animated-circle-red {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated-circle-yellow {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  animation-delay: 0.35s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated-circle-white {
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn
+}
 @media (min-width: 400px) {
   .logo {
     width: 45%;
