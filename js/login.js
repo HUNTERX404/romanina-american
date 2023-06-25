@@ -16,10 +16,9 @@ function onSubmit(event) {
   signInWithEmailAndPassword(auth, email, password)
     .then((cred) => {
       localStorage.setItem("token", cred.user.uid);
-      if (cred.user.uid === "sC68VdPqpzbRSf5NFQIbAXB7GuQ2") {
+      if (cred.user.uid === "FyF7OmLJfTTzCbn6kOJrHgMcaq43") {
         window.location.href = "./dashboard/index.html";
-      }
-      else{
+      } else {
         checkFiles(cred.user.uid);
       }
     })

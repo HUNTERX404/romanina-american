@@ -32,13 +32,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-auth.js";
 import { getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-storage.js";
 const firebaseConfig = {
-  apiKey: "AIzaSyB3L0B3SuCrKWcNhTHzlLkkV08MCf0hUDA",
-  authDomain: "romanian-american.firebaseapp.com",
-  projectId: "romanian-american",
-  storageBucket: "romanian-american.appspot.com",
-  messagingSenderId: "26442140157",
-  appId: "1:26442140157:web:e5252e4968ecd748157194",
-  measurementId: "G-FTTL8TF09G",
+  apiKey: "AIzaSyAWsIo9YIU5KqpYXBNyLGqojOibTZLWfJA",
+  authDomain: "erasmusrau-dc187.firebaseapp.com",
+  projectId: "erasmusrau-dc187",
+  storageBucket: "erasmusrau-dc187.appspot.com",
+  messagingSenderId: "673166647723",
+  appId: "1:673166647723:web:2fc81c389920a006feb2ee",
+  measurementId: "G-42FR18LVX0",
 };
 initializeApp(firebaseConfig);
 // init services
