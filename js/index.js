@@ -65,4 +65,5 @@ export {
   getDownloadURL,
   signOut,
   sendPasswordResetEmail,
+  deleteDoc,
 };

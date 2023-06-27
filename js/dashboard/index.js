@@ -1,4 +1,14 @@
-import { auth, colRef, onSnapshot, query, signOut, where } from "../index.js";
+import {
+  auth,
+  colRef,
+  db,
+  deleteDoc,
+  doc,
+  onSnapshot,
+  query,
+  signOut,
+  where,
+} from "../index.js";
 
 let students = [];
 // queries
@@ -34,16 +44,19 @@ function fillData() {
                 <td>${student.University}</td>
                 <td>${student.specialist}</td>
                 <td>${student.transitionDuration}</td>
-                <td class="w-auto">
+                <td class="w-auto d-flex gap-2 align-items-center">
                     <a href="student-info.html?id=${student.id}">
                         <span class="material-icons show-icon"> visibility </span>
                     </a>
+                    <button class="btn delete-icon d-flex">
+                        <span class="material-icons"> delete </span>
+                    </button>
                 </td>
               </tr>`;
     tableBody.innerHTML += studentRow;
   });
   $(document).ready(function () {
-    var dataTable = $("#myTable").dataTable({
+    let dataTable = $("#myTable").dataTable({
       dom: "<f<t><'d-flex flex-column flex-md-row gap-4 justify-content-md-between align-items-start align-items-md-center'lp>>",
       ordering: false,
       aLengthMenu: [
@@ -53,6 +66,14 @@ function fillData() {
     });
     $("#searchbox").keyup(function () {
       dataTable.fnFilter(this.value);
+    });
+    $("#myTable").on("click", "td .delete-icon", function () {
+      const idSelected = $(this).closest("tr")[0].cells[0].textContent;
+      console.log(idSelected);
+      const docRef = doc(db, "students", idSelected);
+      deleteDoc(docRef).then(() => {
+        window.location.reload();
+      });
     });
   });
 }

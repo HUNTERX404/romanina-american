@@ -94,9 +94,22 @@ body {
   padding: 5px;
   transition: all 0.3s ease;
 }
+
 .show-icon:hover {
   background-color: rgba(4, 20, 54, 0.3);
   cursor: pointer;
+}
+.delete-icon{
+  color: var(--danger-color);
+  border-radius: 50%;
+  background-color: rgba(192, 39, 45, 0.2);
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+.delete-icon:hover {
+  background-color: rgba(192, 39, 45, 0.3);
+  cursor: pointer;
+  color: var(--danger-color);
 }
 .dataTables_length {
   display: flex;
